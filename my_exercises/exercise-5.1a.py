@@ -25,5 +25,7 @@ london_co = {
 }
 
 divices = input("Введите имя устройства: ")
-print(london_co[divices])
+parameter = input("Введите имя параметра: ")
+
+print(london_co[divices][parameter])
 
