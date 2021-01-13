@@ -1,6 +1,7 @@
 mode = input("Введите режим работы интерфейса (access/trunk): " )
 interface = input("Введите тип и номер интерфейса: ")
 vlans = input("Введите номер влан(ов): ")
+
 mode_template = {
         'access_template' : [
         "switchport mode access", "switchport access vlan {}",
