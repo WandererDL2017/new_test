@@ -24,3 +24,12 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+mac_table = []
+with open('exercises/07_files/CAM_table.txt') as macs:
+    for line in macs:
+        words = line.split()
+        if words and words[0].isdigit():
+            vlan, mac, type, interface = words
+            mac_table.append([int(vlan), mac, interface])
+    for vlan, mac, interface in sorted(mac_table):
+        print(f'{vlan:<9}{mac:20}{interface}')

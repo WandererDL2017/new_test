@@ -17,3 +17,13 @@
 """
 
 ignore = ["duplex", "alias", "Current configuration"]
+
+config_sw1_cleared = open('exercises/07_files/config_sw1_cleared.txt', 'w')
+
+with open('exercises/07_files/config_sw1.txt') as config:
+    for line in config:
+        for word in ignore:
+            if word in line:
+                break
+        else:
+            config_sw1_cleared.write(line)

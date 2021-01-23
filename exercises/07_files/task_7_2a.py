@@ -13,3 +13,10 @@
 """
 
 ignore = ["duplex", "alias", "Current configuration"]
+with open('exercises/07_files/config_sw1.txt') as config:
+  for line in config:
+    for word in ignore:
+      if line.startswith('!') or word in line:
+        break
+    else:
+      print(line.rstrip())

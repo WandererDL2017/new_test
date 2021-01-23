@@ -40,3 +40,9 @@ interface Ethernet0/3
 ...
 
 """
+with open('exercises/07_files/config_sw1.txt') as config:
+  for line in config:
+    if line.startswith('!'):
+        line.replace('!', '')
+    else:
+        print(line.rstrip())

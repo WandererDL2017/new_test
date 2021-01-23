@@ -17,3 +17,10 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+with open('exercises/07_files/CAM_table.txt') as macs:
+    for line in macs:
+        words = line.split()
+        if words and words[0].isdigit():
+            vlan, mac, type, ports = words
+            print(f'{vlan:9}{mac:20}{ports}')
+
